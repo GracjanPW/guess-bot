@@ -32,7 +32,7 @@ client.on('message',msg=>{
         }
         client.guessingIn.push(msg.channel.id)
         let number = Math.floor(Math.random()*((parseInt(range[1])+1)-parseInt(range[0])))+parseInt(range[0])
-        console.log(number)
+        msg.author.send(number)
         msg.channel.send(`Guess the number between ${range[0]} - ${range[1]}`)
         const filter = m => isNumeric(m.content);
         const collector = msg.channel.createMessageCollector(filter);

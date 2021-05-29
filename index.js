@@ -1,3 +1,4 @@
+require('dotenv').config()
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -46,4 +47,4 @@ client.on('message',msg=>{
     } 
 })
 
-client.login('ODQ3OTQwNDg1MDUzOTM5NzU0.YLFYHQ.a3IyiMlmGYdof55tuG6XpFobwvg');
+client.login(process.env.API_KEY);

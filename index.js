@@ -13,6 +13,7 @@ const isNumeric = str => {
     return !isNaN(str) && !isNaN(parseFloat(str)) 
   }
 client.on('message',msg=>{
+    if(msg.author.bot) return;
     if (!msg.member.roles.cache.some(role => role.name === 'psychos' || role.name ==='god')) return;
     if (!msg.content.startsWith('p-')) return
     let args = msg.content.split(' ')
